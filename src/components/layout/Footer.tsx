@@ -58,7 +58,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-4 md:gap-8 mb-10 md:mb-12">
           
           {/* Explore Links */}
-          <div className="col-span-1 flex flex-col items-start md:items-start text-left">
+          <div className="order-1 col-span-1 md:col-span-1 flex flex-col items-start md:items-start text-left">
             <h6 className="text-[#D4AF37] mb-4 font-sans uppercase tracking-[0.3em] text-[9px] font-bold">
               Explore
             </h6>
@@ -77,8 +77,37 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Contact Details (Full width on mobile, middle column on desktop) */}
+          <div className="order-3 md:order-2 col-span-2 md:col-span-1 flex flex-col items-center text-center border-t border-[#D4AF37]/10 pt-8 md:border-none md:pt-0">
+            <h6 className="text-[#D4AF37] mb-4 font-sans uppercase tracking-[0.3em] text-[9px] font-bold">
+              Visit Us
+            </h6>
+            <address className="not-italic flex flex-col items-center md:items-start gap-4 text-xs text-[#F5E9D5]/80 font-sans font-light leading-relaxed">
+              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 text-[#D4AF37] shrink-0 hidden md:block" />
+                <p>
+                  No 7M -406 1st Floor 7th Main,<br />
+                  80 Feet, Hennur Main road, 1st block,<br />
+                  Banaswadi, Bengaluru 560043
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                <a href="tel:+917204111845" className="hover:text-[#D4AF37] transition-colors">
+                  +91 72041 11845
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                <a href="mailto:masara.blr@gmail.com" className="hover:text-[#D4AF37] transition-colors">
+                  masara.blr@gmail.com
+                </a>
+              </div>
+            </address>
+          </div>
+
           {/* Socials & Connect (Moved up for mobile 2-column layout) */}
-          <div className="col-span-1 md:col-start-3 flex flex-col items-end md:items-end text-right md:border-none">
+          <div className="order-2 md:order-3 col-span-1 md:col-span-1 flex flex-col items-end md:items-end text-right md:border-none">
             <h6 className="text-[#D4AF37] mb-4 font-sans uppercase tracking-[0.3em] text-[9px] font-bold">
               Connect
             </h6>
@@ -106,35 +135,6 @@ export function Footer() {
             <p className="mt-4 text-[9px] font-sans text-[#F5E9D5]/50 italic tracking-wide max-w-[120px]">
               Follow our culinary journey.
             </p>
-          </div>
-
-          {/* Contact Details (Full width on mobile, middle column on desktop) */}
-          <div className="col-span-2 md:col-span-1 md:col-start-2 flex flex-col items-center text-center border-t border-[#D4AF37]/10 pt-8 md:border-none md:pt-0">
-            <h6 className="text-[#D4AF37] mb-4 font-sans uppercase tracking-[0.3em] text-[9px] font-bold">
-              Visit Us
-            </h6>
-            <address className="not-italic flex flex-col items-center md:items-start gap-4 text-xs text-[#F5E9D5]/80 font-sans font-light leading-relaxed">
-              <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-2">
-                <MapPin className="w-3.5 h-3.5 mt-0.5 text-[#D4AF37] shrink-0 hidden md:block" />
-                <p>
-                  No 7M -406 1st Floor 7th Main,<br />
-                  80 Feet, Hennur Main road, 1st block,<br />
-                  Banaswadi, Bengaluru 560043
-                </p>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
-                <a href="tel:+917204111845" className="hover:text-[#D4AF37] transition-colors">
-                  +91 72041 11845
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
-                <a href="mailto:masara.blr@gmail.com" className="hover:text-[#D4AF37] transition-colors">
-                  masara.blr@gmail.com
-                </a>
-              </div>
-            </address>
           </div>
 
         </div>
