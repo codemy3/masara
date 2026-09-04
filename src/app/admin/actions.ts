@@ -2,6 +2,7 @@
 
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
+import { headers } from "next/headers";
 
 export async function login(formData: FormData) {
   const email = formData.get("email") as string;
@@ -33,10 +34,14 @@ export async function resetPassword(formData: FormData) {
   }
   
   const supabase = await createClient();
+  const headersList = await headers();
+  const host = headersList.get("host") || "localhost:3000";
+  const protocol = host.includes("localhost") ? "http" : "https";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || `${protocol}://${host}`;
   
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
     // Redirect to the auth callback with the next url parameter
-    redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/auth/callback?next=/admin/update-password`,
+    redirectTo: `${siteUrl}/auth/callback?next=/admin/update-password`,
   });
   
   if (error) {

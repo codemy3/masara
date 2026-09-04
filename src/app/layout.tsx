@@ -27,6 +27,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://masarafinedine.com"),
   title: {
     default: "Masara Fine Dine | Bangalore",
     template: "%s | Masara Fine Dine"

@@ -13,18 +13,28 @@ if (typeof window !== "undefined") {
 
 // 1. Array containing both Food and Ambience Images
 const allSources = [
-  "/images/restaurant/01.webp",
+  "/images/restaurant/rest-1.webp",
   "/images/food/food-01.webp",
-  "/images/restaurant/02.webp",
+  "/images/restaurant/rest-2.webp",
   "/images/food/food-02.webp",
-  "/images/restaurant/03.webp",
+  "/images/restaurant/rest-3.webp",
   "/images/food/food-03.webp",
-  "/images/restaurant/04.webp",
+  "/images/restaurant/rest-4.webp",
   "/images/food/food-04.webp",
-  "/images/restaurant/5.webp",
+  "/images/restaurant/rest-5.webp",
   "/images/food/food-05.webp",
+  "/images/restaurant/rest-6.webp",
+  "/images/food/food-06.webp",
+  "/images/restaurant/rest-7.webp",
+  "/images/food/food-07.webp",
+  "/images/restaurant/rest-8.webp",
+  "/images/food/food-08.webp",
+  "/images/restaurant/01.webp",
+  "/images/restaurant/02.webp",
+  "/images/restaurant/03.webp",
+  "/images/restaurant/04.webp",
   "/images/restaurant/06.webp",
-  ...Array.from({ length: 22 }, (_, i) => `/images/food/food-${(i + 6).toString().padStart(2, '0')}.webp`),
+  ...Array.from({ length: 19 }, (_, i) => `/images/food/food-${(i + 9).toString().padStart(2, '0')}.webp`),
 ];
 
 // 2. Assign dynamic aspects for the Pinterest look
