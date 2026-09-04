@@ -26,32 +26,12 @@ export function ReservationTicket() {
     if (hasSeenTicket) {
       setShowBadge(true);
     } else {
-      let triggered = false;
-      
-      const triggerPopup = () => {
-        if (triggered) return;
-        triggered = true;
+      const timer = setTimeout(() => {
         setShowTicket(true);
         sessionStorage.setItem("masara_ticket_shown", "true");
-        window.removeEventListener("scroll", handleScroll);
-      };
-      
-      const handleScroll = () => {
-        // Trigger if the user has scrolled past the hero section (approx 800px)
-        if (window.scrollY > 800) {
-          triggerPopup();
-        }
-      };
+      }, 30000); // Wait exactly 30 seconds
 
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      
-      // Fallback: trigger after 45 seconds if they haven't scrolled much
-      const timer = setTimeout(triggerPopup, 45000); 
-      
-      return () => {
-        clearTimeout(timer);
-        window.removeEventListener("scroll", handleScroll);
-      };
+      return () => clearTimeout(timer);
     }
   }, []);
 
