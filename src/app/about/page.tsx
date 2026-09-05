@@ -135,7 +135,7 @@ export default function About() {
             </h2>
 
             <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#F5E9D5]/80 mb-6 fade-up">
-              The journey began with an uncompromising love for coastal flavours. From opening the beloved Kulki Hub, to capturing the nation's attention and standing victorious on MasterChef India Season 8, his path has been defined by instinct and grit.
+              The journey began with an uncompromising love for coastal flavours. From opening the beloved Kulki Hub, to capturing the nation&apos;s attention and standing victorious on MasterChef India Season 8, his path has been defined by instinct and grit.
             </p>
             <p className="font-sans text-sm md:text-base font-light leading-relaxed text-[#F5E9D5]/80 fade-up">
               Today, Masara stands in Bangalore not just as a restaurant, but as the culmination of that lifelong pursuit—bringing authentic, elevated Indian artistry to the table in a setting designed for the discerning palate.
@@ -181,7 +181,7 @@ export default function About() {
           </h2>
 
           <h3 className="font-sans text-sm md:text-base font-bold uppercase tracking-[0.2em] text-[#3D081A] mb-8">
-            "We do not just serve food; we craft memories."
+            &quot;We do not just serve food; we craft memories.&quot;
           </h3>
 
           <div className="w-16 h-[1px] bg-[#D4AF37] mb-8" />

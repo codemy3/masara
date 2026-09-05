@@ -27,7 +27,7 @@ export function Hero() {
   useEffect(() => {
     if (!sectionRef.current) return;
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     // Universal Timeline (Smooth scrub at 1.5)
     mm.add("all", () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition, useRef } from "react";
+import { useState, useTransition } from "react";
 import { DbMenuCategory, DbMenuItem } from "@/types/database";
 import { Plus, Edit2, Trash2, Eye, EyeOff, Star, ChevronDown, ChevronUp, X } from "lucide-react";
 import { toggleItemAvailability, deleteMenuItem, saveCategory, saveMenuItem, deleteCategory } from "@/app/admin/mutations";

@@ -5,6 +5,12 @@ import { revalidatePath } from "next/cache";
 
 export async function toggleItemAvailability(id: string, isAvailable: boolean) {
   const supabase = await createClient();
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  if (!user) {
+    console.error("Auth failed in toggleItemAvailability:", authError);
+    return { error: "Unauthorized" };
+  }
+
   const { error } = await supabase
     .from("menu_items")
     .update({ is_available: isAvailable })
@@ -19,6 +25,9 @@ export async function toggleItemAvailability(id: string, isAvailable: boolean) {
 
 export async function deleteMenuItem(id: string) {
   const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
+
   const { error } = await supabase
     .from("menu_items")
     .delete()
@@ -37,6 +46,8 @@ export async function saveCategory(formData: FormData) {
   const description = formData.get("description") as string;
   
   const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
   
   if (id) {
     // Update
@@ -75,6 +86,8 @@ export async function saveMenuItem(formData: FormData) {
   }
 
   const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
   
   const payload = {
     category_id,
@@ -101,6 +114,8 @@ export async function saveMenuItem(formData: FormData) {
 
 export async function deleteCategory(id: string) {
   const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: "Unauthorized" };
   
   // Note: if there are foreign key constraints, Supabase will block this 
   // unless cascade delete is set up, or the user manually deletes items first.

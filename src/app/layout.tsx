@@ -4,7 +4,6 @@ import "./globals.css";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ReservationTicket } from "@/components/ReservationTicket";
-import { ScrollToTop } from "@/components/ScrollToTop";
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -70,7 +69,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body suppressHydrationWarning className="min-h-screen flex flex-col font-sans bg-burgundy text-ivory">
-        <ScrollToTop />
         <Header />
         <main className="flex-1">
           {children}  
