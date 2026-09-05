@@ -27,13 +27,13 @@ export function IntroAndChef() {
 
       const bentoItems = gsap.utils.toArray(".bento-item");
       
-      let mm = gsap.matchMedia();
+      const mm = gsap.matchMedia();
 
       mm.add({
         isMobile: "(max-width: 767px)",
         isDesktop: "(min-width: 768px)"
       }, (context) => {
-        let { isMobile, isDesktop } = context.conditions as { isMobile: boolean, isDesktop: boolean };
+        const { isMobile, isDesktop } = context.conditions as { isMobile: boolean, isDesktop: boolean };
 
         // THE PERFECT SYNC LOGO ANIMATION
         gsap.fromTo(
@@ -62,13 +62,13 @@ export function IntroAndChef() {
             if (isDesktop) return [-600, 600, -500, 500, -700, 700, -400][i % 7];
             // MOBILE: Scatter gently to the sides
             return (i === 1) ? "-10vw" : (i === 3) ? "15vw" : 0;
-          }) as any, 
+          }) as unknown as any, 
           
           y: ((i: number) => {
             if (isDesktop) return [-600, -500, 600, 500, -400, 700, 400][i % 7];
             // MOBILE FIX: Pushed down so they hover in the blank space BELOW the text
             return (i === 1) ? "-12vh" : (i === 3) ? "-18vh" : 0;
-          }) as any,
+          }) as unknown as any,
           
           rotation: (i: number) => {
             if (isDesktop) return [-30, 45, -15, 25, -40, 20, -10][i % 7];

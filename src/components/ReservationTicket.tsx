@@ -20,6 +20,7 @@ export function ReservationTicket() {
   const textRingRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     setIsClient(true);
     const hasSeenTicket = sessionStorage.getItem("masara_ticket_shown");
 
@@ -171,7 +172,7 @@ export function ReservationTicket() {
               <div className="w-16 h-[1px] bg-[#3D081A]/30 mb-6" />
 
               <p className="font-sans text-xs text-[#3D081A]/80 font-light leading-relaxed mb-8 max-w-[260px]">
-                Tables for tonight's service are filling quickly. Secure your exclusive dining experience now via WhatsApp.
+                Tables for tonight&apos;s service are filling quickly. Secure your exclusive dining experience now via WhatsApp.
               </p>
 
               <Link

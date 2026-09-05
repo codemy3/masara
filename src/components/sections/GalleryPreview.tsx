@@ -23,7 +23,7 @@ export function GalleryPreview() {
   useEffect(() => {
     if (!sectionRef.current) return;
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     mm.add({
       isMobile: "(max-width: 767px)",

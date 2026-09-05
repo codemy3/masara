@@ -61,6 +61,7 @@ export function Header() {
             src="/images/logo/logo.webp"
             alt="Masara Fine Dine"
             fill
+            sizes="(max-width: 768px) 120px, 150px"
             className="object-contain object-left"
             priority
           />

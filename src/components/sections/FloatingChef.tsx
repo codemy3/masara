@@ -24,13 +24,13 @@ export function FloatingChef() {
     const ctx = gsap.context(() => {
       gsap.set(floatingRef.current, { autoAlpha: 0 });
 
-      let mm = gsap.matchMedia();
+      const mm = gsap.matchMedia();
 
       mm.add({
         isMobile: "(max-width: 767px)",
         isDesktop: "(min-width: 768px)"
       }, (context) => {
-        let { isMobile } = context.conditions as { isMobile: boolean };
+        const { isMobile } = context.conditions as { isMobile: boolean };
 
         ScrollTrigger.create({
           trigger: chefSection,

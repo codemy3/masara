@@ -121,7 +121,7 @@ export default function AdminLogin() {
                 )}
                 
                 <p className="text-sm text-[#3D081A]/70 text-center mb-2">
-                  Enter your email address and we'll send you a link to reset your password.
+                  Enter your email address and we&apos;ll send you a link to reset your password.
                 </p>
 
                 <div className="flex flex-col gap-2">
